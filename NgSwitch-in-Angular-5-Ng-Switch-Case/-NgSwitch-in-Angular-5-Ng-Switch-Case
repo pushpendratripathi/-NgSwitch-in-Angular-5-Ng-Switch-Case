@@ -1,0 +1,38 @@
+Services.component.ts
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.css']
+})
+export class ServicesComponent implements OnInit {
+
+  constructor() {
+ }
+
+  ngOnInit() {
+  }
+
+  favcolor = "black";
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+services.component.html
+
+<div [ngSwitch] = "favcolor">
+<div *ngSwitchCase =  "'red'">
+this is a favcolor  {{favcolor}} 
+</div>
+<div *ngSwitchCase =  "'green'">
+  this is a favcolor  {{favcolor}} 
+  </div>
+  <div *ngSwitchCase =  "'blue'">
+    this is a favcolor  {{favcolor}} 
+    </div>
+<div *ngSwitchDefault>
+  This is the Default one...
+</div>
+
+</div>
